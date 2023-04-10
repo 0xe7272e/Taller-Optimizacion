@@ -83,6 +83,9 @@ El algoritmo funciona moviendo la solución actual de esquina a esquina del poli
 
 El nombre "descenso escalonado" se refiere a cómo el algoritmo mueve de una esquina a otra del poliedro de soluciones factibles. En cada iteración, se mueve a una esquina adyacente al "escalón" más cercano, lo que lleva a una reducción en el valor de la función objetivo
 
+#### Aclaración:
+El método del "descenso escalonado" aparece tanto en el libro como en el internet como el método simplex, sin embargo, esto no tiene sentido puesto que simplex es un algoritmo para solución de problemas de programación lineal y el problema dado es un problema de programación no lineal, por lo que intuyo que el método al que se refiere es el método de descenso de gradiente.
+
 #### Programación del método
 
 ```python
