@@ -407,7 +407,7 @@ https://github.com/Paulnkk/Nonlinear-Optimization-Algorithms
 2. ¿Qué es eso del backtracking? que son las condiciones Wolfe?
 3. ¿Qué es de todo esto en el caso de que haya restricciones?
 4. ¿Por qué podrían dar resultados diferentes si todos son algoritmos de
-   minimización o maximización de funciones no lineales?
+   minimización o maximización de funciones no lineales? ¿Qué tiene que ver la matriz hessiana?
 
 
 ### Pendiente
