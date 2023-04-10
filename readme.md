@@ -73,6 +73,16 @@ En general los métodos de gradiente conjugado funcionan de la siguiente manera:
 4. determinar el vector de desplazamiento
 5. actualizar la ubicación estimada del punto mínimo.
 
+#### Resumen:
+1. Método del gradiente descendente: es uno de los métodos más simples de optimización y consiste en actualizar iterativamente la posición del punto en dirección opuesta al gradiente de la función objetivo, multiplicado por un factor de aprendizaje (también conocido como tasa de aprendizaje). El factor de aprendizaje determina el tamaño de los pasos que se dan en cada iteración. Este método puede ser ineficiente en casos en los que la función objetivo es muy irregular o tiene valles estrechos y profundos.
+
+2. Método del gradiente conjugado: se trata de un método iterativo para encontrar el mínimo de una función de varias variables. Este método utiliza información previa de las iteraciones para calcular la dirección de búsqueda óptima. Es un método más eficiente que el gradiente descendente cuando la función objetivo es cuadrática.
+
+3. Método de Broyden-Fletcher-Goldfarb-Shanno (BFGS): es un método de optimización sin restricciones que utiliza una aproximación de la matriz Hessiana para actualizar la dirección de búsqueda en cada iteración. Este método es eficiente para problemas de optimización sin restricciones cuando se tiene acceso a la derivada de la función objetivo.
+
+4. Método de Newton: también utiliza información de la matriz Hessiana para calcular la dirección de búsqueda en cada iteración, pero en este caso la matriz Hessiana es calculada en cada iteración. Este método puede ser muy eficiente para problemas de optimización sin restricciones, pero puede ser computacionalmente costoso debido al cálculo de la matriz Hessiana en cada iteración. Además, la matriz Hessiana puede no ser definida positiva en algunos puntos, lo que puede llevar a problemas de convergencia.
+
+
 ### 1. Método de descenso escalonado
 #### Introducción: 
 El método del descenso escalonado, también conocido como método simplex, es un algoritmo utilizado en la optimización lineal para encontrar la solución óptima de un problema de programación lineal. 
