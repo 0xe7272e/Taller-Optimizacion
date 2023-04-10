@@ -377,6 +377,7 @@ La matriz Hessiana es una matriz cuadrada simétrica de segundas derivadas parci
 
 En otras palabras, la Hessiana nos indica cómo cambian las pendientes de la función en cada dirección en un punto determinado. Si la matriz Hessiana es positiva definida, significa que la función es cóncava en ese punto, lo que sugiere que es un mínimo local. Si la matriz Hessiana es negativa definida, la función es convexa en ese punto, lo que sugiere que es un máximo local. Por otro lado, si la matriz Hessiana tiene algunos valores positivos y algunos negativos, entonces el punto es un punto silla.
 
+La razón por la cuál en los algoritmos de Machine Learning (redes neuronales) se usa el método del gradiente descendiente es porque el costo computacional de calcular la matriz hessiana es demasiado alto al momento de la fase de entrenamiento de una red neuronal, esto hace que sea mas óptimo minimizar los pesos de las neuronas con el algoritmo de gradiente descendiente aunque éste no sea el mejor método de minimización en cuanto a convergencia.
 # Referencias
 
 ###### Método simplex 
