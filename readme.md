@@ -412,3 +412,5 @@ https://github.com/Paulnkk/Nonlinear-Optimization-Algorithms
 
 ### Pendiente
 1. Actualizar todo bien, subir los scripts al taller
+2. Exposición
+3. Aclarar dudas y eliminar scripts innecesarios, actualizar funciones y gradientes en funciones de prueba.
