@@ -80,8 +80,7 @@ En general los métodos de gradiente conjugado funcionan de la siguiente manera:
 
 3. Método de Broyden-Fletcher-Goldfarb-Shanno (BFGS): es un método de optimización sin restricciones que utiliza una aproximación de la matriz Hessiana para actualizar la dirección de búsqueda en cada iteración. Este método es eficiente para problemas de optimización sin restricciones cuando se tiene acceso a la derivada de la función objetivo.
 
-4. Método de Newton: también utiliza información de la matriz Hessiana para calcular la dirección de búsqueda en cada iteración, pero en este caso la matriz Hessiana es calculada en cada iteración. Este método puede ser muy eficiente para problemas de optimización sin restricciones, pero puede ser computacionalmente costoso debido al cálculo de la matriz Hessiana en cada iteración. Además, la matriz Hessiana puede no ser definida positiva en algunos puntos, lo que puede llevar a problemas de convergencia.
-
+4. Método de Newton: también utiliza información de la matriz Hessiana para calcular la dirección de búsqueda en cada iteración, pero en este caso la matriz Hessiana es calculada en cada iteración. Este método puede ser muy eficiente para problemas de optimización sin restricciones, pero puede ser computacionalmente costoso debido al cálculo de la matriz Hessiana en cada iteración. Además, la matriz Hessiana puede no ser definida positiva en algunos puntos, lo que puede llevar a problemas de convergencia. (añadí el método de newton pues el resto de los métodos son métodos "newtonianos")
 
 ### 1. Método de descenso escalonado
 #### Introducción: 
@@ -133,7 +132,6 @@ for i in range(max_iter):
 print("El mínimo se encuentra en:", x)
 print("El valor mínimo es:", f(x))
 ```
-
 
 
 ### 2. Método de Fletcher y Reeves (gradiente conjugado)
@@ -381,6 +379,7 @@ Además, los dos métodos tienen estructuras similares y, de hecho, el método D
 
 Sin embargo, cada método puede diferir en cómo se actualiza la matriz Hessiana aproximada y cómo se eligen los parámetros, lo que puede afectar la convergencia a soluciones similares. En resumen, aunque algunos métodos pueden converger a soluciones similares, no hay garantía de que lo hagan siempre.
 
+
 ---
 
 La matriz Hessiana es una matriz cuadrada simétrica de segundas derivadas parciales de una función. Se utiliza en cálculo multivariable y optimización para evaluar la curvatura y concavidad de una función en un punto dado.
@@ -388,6 +387,7 @@ La matriz Hessiana es una matriz cuadrada simétrica de segundas derivadas parci
 En otras palabras, la Hessiana nos indica cómo cambian las pendientes de la función en cada dirección en un punto determinado. Si la matriz Hessiana es positiva definida, significa que la función es cóncava en ese punto, lo que sugiere que es un mínimo local. Si la matriz Hessiana es negativa definida, la función es convexa en ese punto, lo que sugiere que es un máximo local. Por otro lado, si la matriz Hessiana tiene algunos valores positivos y algunos negativos, entonces el punto es un punto silla.
 
 La razón por la cuál en los algoritmos de Machine Learning (redes neuronales) se usa el método del gradiente descendiente es porque el costo computacional de calcular la matriz hessiana es demasiado alto al momento de la fase de entrenamiento de una red neuronal, esto hace que sea mas óptimo minimizar los pesos de las neuronas con el algoritmo de gradiente descendiente aunque éste no sea el mejor método de minimización en cuanto a convergencia.
+
 # Referencias
 
 ###### Método simplex 
@@ -411,17 +411,3 @@ La razón por la cuál en los algoritmos de Machine Learning (redes neuronales) 
 # Referencia general:
 http://www.mymathlib.com/optimization/nonlinear/unconstrained/steepest\_descent.html
 https://github.com/Paulnkk/Nonlinear-Optimization-Algorithms
-
-
-### Preguntas
-1. Dice que el método simplex es necesario, sin embargo esto es un problema de programación no lineal, ¿es simplex? o gradiente descendente?
-2. ¿Qué es eso del backtracking? que son las condiciones Wolfe?
-3. ¿Qué es de todo esto en el caso de que haya restricciones?
-4. ¿Por qué podrían dar resultados diferentes si todos son algoritmos de
-   minimización o maximización de funciones no lineales? ¿Qué tiene que ver la matriz hessiana?
-
-
-### Pendiente
-1. Actualizar todo bien, subir los scripts al taller
-2. Exposición
-3. Aclarar dudas y eliminar scripts innecesarios, actualizar funciones y gradientes en funciones de prueba.
